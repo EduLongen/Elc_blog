@@ -5,6 +5,7 @@
     <%= post.title %>
   </p>
 
+  <h4> posted by: <%= link_to post.user.name, user_path(post.user) %> - <%= time_tag(post.created_at, "data-local": "time-ago") %> </h4>
   <h6><%= pluralize(post.views, "view") %></h6>
 
   <p>
