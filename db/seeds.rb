@@ -8,6 +8,12 @@
 
 User.create(name: "Eduardo", email: "du@test.com", password: "123456", password_confirmation: "123456")
 
-5.times do |i|
+User.create(name: "john", email: "john@test.com", password: "123456", password_confirmation: "123456")
+
+1.times do |i|
   Post.create(title: "Post #{i}", content: "Content #{i} of post #{i}", user_id: User.first.id)
+end
+
+1.times do |i|
+  Post.create(title: "Post #{i}", content: "Content #{i} of post #{i}", user_id: User.second.id)
 end
